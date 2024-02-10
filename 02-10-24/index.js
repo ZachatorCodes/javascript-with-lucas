@@ -25,3 +25,4 @@ button.addEventListener("click", (event) => {
 // For information on game search API end point, check out https://apidocs.cheapshark.com/#e3d7f1f0-f7a4-b36a-587a-6514a40f4d88.
 
 // For an example of what we're building, check out https://zachatorcodes.github.io/phase-1-project/
+// To view the source code for the example project, check out https://github.com/ZachatorCodes/phase-1-project
