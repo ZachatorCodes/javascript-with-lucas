@@ -8,11 +8,18 @@ const textInput = document.getElementById("text-input")
 
 
 button.addEventListener("click", (event) => {
+  // We always have to use event prevent default when submitting a form, to prevent the page from reloading.
   event.preventDefault()
+
+  // Then, we grab the value of the text input from our input element.
   const textInputValue = textInput.value
+
+  // Then, we use String interpolation with the API endpoint to pass that value.
   fetch(`https://www.cheapshark.com/api/1.0/games?title=${formValue}`)
     .then(r => r.json())
     .then(games => {
       console.log(games)
     })
 })
+
+// For information on game search API end point, check out https://apidocs.cheapshark.com/#e3d7f1f0-f7a4-b36a-587a-6514a40f4d88.
