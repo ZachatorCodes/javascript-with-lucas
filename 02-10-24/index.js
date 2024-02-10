@@ -1,9 +1,12 @@
+// First, we grab the button element from our HTML file.
 const button = document.getElementById("button")
-const form = document.getElementById("form-input")
+
+// Then, we go ahead and grab the form element 
+const textInput = document.getElementById("text-input")
 
 button.addEventListener("click", (event) => {
   event.preventDefault()
-  const formValue = form.value
+  const textInputValue = textInput.value
   fetch(`https://www.cheapshark.com/api/1.0/games?title=${formValue}`)
     .then(r => r.json())
     .then(games => {
