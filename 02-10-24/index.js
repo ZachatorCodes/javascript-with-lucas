@@ -15,10 +15,10 @@ button.addEventListener("click", (event) => {
   const textInputValue = textInput.value
 
   // Then, we use String interpolation with the API endpoint to pass that value.
-  fetch(`https://www.cheapshark.com/api/1.0/games?title=${formValue}`)
-    .then(r => r.json())
+  fetch(`https://www.cheapshark.com/api/1.0/games?title=${textInputValue}`)
+    .then(r => r.json()) // Convert the response to JSON
     .then(games => {
-      console.log(games)
+      console.log(games) // Mess with the converted data
     })
 })
 
