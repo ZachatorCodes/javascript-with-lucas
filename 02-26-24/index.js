@@ -44,3 +44,13 @@ filteredObjects.forEach((person) => {
   newH3.textContent = person.name;
   htmlBody.appendChild(newH3);
 });
+
+// OR
+
+objects
+  .filter((object) => object.favoriteColor[0] === "B")
+  .forEach((person) => {
+    const newH3 = document.createElement("h3");
+    newH3.textContent = person.name;
+    htmlBody.appendChild(newH3);
+  });
